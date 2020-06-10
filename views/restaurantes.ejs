@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Restaurantes</title>
+    <style>
+    #customers {
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #customers td, #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+    #customers tr:hover {background-color: #ddd;}
+
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+  </head>
+  <body>
+    <h3> Listado Restaurantes</h3>
+    <table id="customers">
+        <th>Nombre</th>
+        <th>Poblacion</th>
+        <th>Dirección</th>
+        <th>Correo electrónico</th>
+        <th>Teléfono</th>
+        <th>Código postal</th>
+      <% restaurantes.forEach((restaurante, i) => { %>
+        <tr>
+          <td><%= restaurante.name %></td>
+          <td><%= restaurante.location %></td>
+          <td><%= restaurante.address %></td>
+          <td><%= restaurante.email %></td>
+          <td><%= restaurante.phone %></td>
+          <td><%= restaurante.zipcode %></td>
+        </tr>
+      <% }); %>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Introduce un nuevo restaurante</title>
+    <style> 
+      input[type=text] {
+        border: 2px solid red;
+        border-radius: 4px;
+        padding: 10px 22px;
+      }
+      input[type=submit] {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 10px 22px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+</style>
+  </head>
+  <body>
+
+    <form action="/crearRestaurante" method="post">
+      <input type="text" name="name" placeholder="Nombre">
+      <input type="text" name="location" placeholder="Poblacion">
+      <input type="text" name="address" placeholder="Direccion">
+      <input type="text" name="email" placeholder="Correo">
+      <input type="text" name="phone" placeholder="Telefono">
+      <input type="text" name="zipcode" placeholder="Código postal">
+      <input type="submit" value="Insertar restaurante">
+    </form>
+  </body>
+</html>
